@@ -18,7 +18,7 @@ const FetchItems = () => {
         const controller = new AbortController();
         const signal = controller.signal;
         dispatch(fetchStatusAction.markFetchingStarted());
-        fetch("http://localhost:8080/items", { signal })
+        fetch("https://nine-myntra-clone-1.onrender.com/items", { signal })
             .then((res) => res.json())
             .then(({ items }) => {
                 dispatch(fetchStatusAction.markFetchDone());
